@@ -9,7 +9,6 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
@@ -26,12 +25,17 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: const Center( 
+      body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextWidget(displayText: 'Welcome to bakery heaven, where flour meets prefession', styleVariant: 'title'),
-            TextWidget(displayText: 'Sharing divine sweetness', styleVariant: 'subtitle'),
+            TextWidget(
+                displayText:
+                    'Welcome to bakery heaven, where flour meets prefession',
+                styleVariant: 'title'),
+            TextWidget(
+                displayText: 'Sharing divine sweetness',
+                styleVariant: 'subtitle'),
             TextWidget(displayText: 'Get started here', styleVariant: 'normal')
           ],
         ),
