@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
-import './myhomepage.dart';
 
-// entry point to application
+import 'widgets/text.dart';
+
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
-// statelesswidget 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-     theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return const MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Padding(
+            padding: EdgeInsets.all(16.0),
+            child: CustomTextField(),
+          ),
+        ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
-

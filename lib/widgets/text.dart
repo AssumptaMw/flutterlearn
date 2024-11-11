@@ -1,16 +1,33 @@
 import 'package:flutter/material.dart';
 
-class TextWidget extends StatelessWidget {
-  const TextWidget({super.key, required this.displayText, required this.styleVariant});
-  final String displayText;
-  final String styleVariant; // title, subtitle, normal-text,small-text
- 
+class CustomTextField extends StatelessWidget {
+  const CustomTextField({super.key});
+
+
+  
   @override
   Widget build(BuildContext context) {
-     return  Text(displayText,
-    style: (styleVariant =='title')?
-    const TextStyle(fontSize: 32,fontWeight: FontWeight.bold, color: Colors.amber):
-    const TextStyle(fontSize: 12, color: Color.fromARGB(255, 7, 255, 193)) ,
+    return  const TextField(
+      decoration: InputDecoration(
+        icon: Icon(Icons.person),
+        hintText: 'Enter Your Name',
+        hintStyle: TextStyle(
+          fontSize: 34,
+          color: Colors.grey,
+        ),
+        enabledBorder: UnderlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.black,
+            width: 1.0,
+          ),
+        ),
+        focusedBorder: UnderlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.black,
+            width: 1.0,
+          ),
+        ),
+      ),
     );
   }
 }
