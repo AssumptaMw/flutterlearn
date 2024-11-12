@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './widgets/text.dart';
+import './widgets/image.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -28,15 +29,10 @@ class _MyHomePageState extends State<MyHomePage> {
       body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TextWidget(
-                displayText:
-                    'Welcome to bakery heaven, where flour meets prefession',
-                styleVariant: 'title'),
-            TextWidget(
-                displayText: 'Sharing divine sweetness',
-                styleVariant: 'subtitle'),
-            TextWidget(displayText: 'Get started here', styleVariant: 'normal')
+          children: <Widget>[
+           TextWidget(displayText: "Number of times button was pressed:", styleVariant: 'title',),
+           TextWidget(displayText: "Normal text test:", styleVariant: 'sub-title',),
+           ImageWidget(imageNumber: 2,)
           ],
         ),
       ),
