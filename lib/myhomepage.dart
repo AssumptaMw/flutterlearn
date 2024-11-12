@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import './widgets/text.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -8,7 +7,6 @@ class MyHomePage extends StatefulWidget {
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
-
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
@@ -26,12 +24,36 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body:const Center( 
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-           TextWidget(displayText: "Number of times button was pressed:", styleVariant: 'title',),
-           TextWidget(displayText: "Normal text test:", styleVariant: 'sub-title',),
+            const TextWidget(
+              displayText: "Number of times button was pressed:",
+              styleVariant: 'title',
+            ),
+            const TextWidget(
+              displayText: "Normal text test:",
+              styleVariant: 'sub-title',
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.orange,
+                  foregroundColor: Colors.black),
+              onPressed: () {},
+              child: const Text('discover'),
+            ),
+            const SizedBox(height: 30),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.black,
+              ),
+              onPressed: () {},
+              child: const Text(
+                'Proceed',
+              ),
+            ),
           ],
         ),
       ),
